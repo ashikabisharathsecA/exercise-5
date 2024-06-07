@@ -1,0 +1,6 @@
+/* Hover effect on buttons and links */
+button:hover,
+a:hover {
+    background-color: #ff6600;
+    color: #fff;
+}
