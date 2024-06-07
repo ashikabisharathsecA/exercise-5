@@ -1,0 +1,44 @@
+/* CSS variables for colors, font sizes, and margins */
+:root {
+    --primary-color: #ff6600;
+    --secondary-color: #333;
+    --font-size-normal: 16px;
+    --font-size-large: 24px;
+    --margin: 20px;
+}
+
+/* Fluid typography */
+body {
+    font-size: calc(var(--font-size-normal) * 1rem);
+}
+
+/* Custom Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Responsive cards using flexbox */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(33.33% - var(--margin));
+    margin-bottom: var(--margin);
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - var(--margin));
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
